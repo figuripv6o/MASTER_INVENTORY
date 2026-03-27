@@ -1,0 +1,8 @@
+- ✅ QR verification: the QR URL must return a signed record (or match the `Authority ID` registry).
+
+---
+
+## Notes for maintainers / devops
+- Keep a copy of the verified QR image under `/assets/authority/verified-qr.png`.  
+- Add a GitHub branch protection rule on `main` requiring status checks and signed commits.  
+- Store `Authority ID` and `service keys` in your secret manager—not in plaintext in the repo.
