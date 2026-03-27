@@ -1,0 +1,15 @@
+# update + ensure git present (Termux)
+pkg update -y && pkg upgrade -y
+pkg install -y git nano
+
+# in your repo folder (example)
+git checkout -b chore/add-buzzlaw-access
+# paste the README block into README.md (or create ACCESS.md)
+git add README.md
+git commit -m "chore: add BuzzLaw access gate + MASTER_INVENTORY header
+
+UUID: $(uuidgen)
+Author-ID: Buzz
+Auth-Token: PLS
+"
+git push -u origin chore/add-buzzlaw-access
